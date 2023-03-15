@@ -1,0 +1,77 @@
+:root {
+  /* FONT COLORS */
+
+  /** primary font **/
+  --color-font-primary: hsl(0, 0%, 100%);
+  --color-font-primary-disabled: hsl(0, 0%, 64%);
+
+  /** secondary font **/
+  --color-font-secondary: hsl(0, 0%, 0%);
+  --color-font-secondary-disabled: hsl(0, 0%, 64%);
+
+  /** tertiary font **/
+  --color-font-tertiary: hsl(0, 0%, 0%);
+
+  /** paragrah font **/
+  --color-font-paragrafh: hsl(245, 14%, 49%);
+  --color-font-paragrafh-light: hsl(209, 16%, 72%);
+
+  /** alert font **/
+  --color-font-alert: hsl(0, 0%, 0%);
+
+  /** input font **/
+  --color-font-input: hsl(245, 14%, 49%);
+  --color-font-input-error: hsl(0, 100%, 67%);
+  --color-font-input-active: hsl(0, 0%, 0%);
+
+  /* BORDER COLORS */
+  --border-color-input: 1px solid hsl(231, 28%, 95%);
+  --border-color-input-error: 1px solid hsl(0, 100%, 67%);
+  --border-color-input-active: 1px solid hsl(0, 0%, 0%);
+  --border-color-secondary: 1px solid hsl(0, 0%, 0%);
+  --border-color-tertiary: 1px solid hsl(0, 0%, 0%);
+  --border-color-disable: 1px solid hsl(0, 0%, 61%);
+
+  /* BACKGROUND COLORS */
+  --bg-color-input: hsl(0, 0%, 100%);
+  --bg-color-primary: hsl(245, 100%, 61%);
+  --bg-color-primary-hover-active: hsl(245, 78%, 51%);
+  --bg-color-secondary: hsl(0, 0%, 100%);
+  --bg-tertiary-light-red: hsl(32, 100%, 92%);
+  --bg-tertiary-light-orange: hsl(61, 100%, 92%);
+  --bg-tertiary-light-green: hsl(83, 100%, 92%);
+  --bg-tertiary-dark-green: hsl(126, 100%, 92%);
+  --bg-tertiary-light-purple: hsl(266, 100%, 92%);
+  --bg-color-success: hsl(158, 100%, 67%);
+  --bg-color-warning: hsl(58, 100%, 67%);
+  --bg-color-danger: hsl(0, 100%, 67%);
+
+  /* SHADOWS */
+  --box-shadow-input: 0px 2px 6px rgba(19, 18, 66, 0.07);
+
+  /* FONTS */
+
+  /** font family**/
+  --font-family-dmsans-regular: 'DMSans-Regular', sans-serif; /* p */
+  --font-family-dmsans-medium: 'DMSans-Medium', sans-serif; /* h1 h2 h4  */
+  --font-family-dmsans-bold: 'DMSans-Bold', sans-serif; /* h3 h5 h6 */
+
+  /** font weight**/
+  --font-weight-regular: 400; /* p */
+  --font-weight-medium: 500; /* h1 h2 h4  */
+  --font-weight-bold: 700; /* h3 h5 h6 */
+
+  /** font size **/
+  --font-size-xs: 1.125rem; /* p */
+  --font-size-s: 1.5rem; /* h6 */
+  --font-size-m: 1.625rem; /* h5 */
+  --font-size-l: 2rem; /* h4 */
+  --font-size-xl: 2.125rem; /* h3 */
+  --font-size-xxl: 3rem; /* h2 */
+  --font-size-xxxl: 3.875rem; /* h1 */
+
+  /* BORDER RADIUS */
+  --border-none: 0px;
+  --border-m: 16px;
+  --border-l: 100px;
+}
