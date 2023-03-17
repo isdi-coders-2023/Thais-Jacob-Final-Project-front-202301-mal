@@ -1,9 +1,13 @@
+import React from 'react';
+
+import { RouterProvider } from 'react-router-dom';
+import { router } from './app/router/router';
+
 function App() {
   return (
-    <h1 className="App">
-      Welcome to Malaguide! Page on the construction. Sorry for the
-      inconvenience.
-    </h1>
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
   );
 }
 
