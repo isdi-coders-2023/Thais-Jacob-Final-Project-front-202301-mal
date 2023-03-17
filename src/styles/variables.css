@@ -13,8 +13,8 @@
   --color-font-tertiary: hsl(0, 0%, 0%);
 
   /** paragrah font **/
-  --color-font-paragrafh: hsl(245, 14%, 49%);
-  --color-font-paragrafh-light: hsl(209, 16%, 72%);
+  --color-font-paragraph: hsl(245, 14%, 49%);
+  --color-font-paragraph-light: hsl(209, 16%, 72%);
 
   /** alert font **/
   --color-font-alert: hsl(0, 0%, 0%);
@@ -22,7 +22,14 @@
   /** input font **/
   --color-font-input: hsl(245, 14%, 49%);
   --color-font-input-error: hsl(0, 100%, 67%);
-  --color-font-input-active: hsl(0, 0%, 0%);
+
+  /** form font **/
+  --color-font-form: hsl(245, 14%, 49%);
+  --color-font-form-success: hsl(158, 100%, 34%);
+  --color-font-form-error: hsl(0, 100%, 67%);
+
+  /* PADDINGS */
+  --padding-form: 1rem;
 
   /* BORDER COLORS */
   --border-color-input: 1px solid hsl(231, 28%, 95%);
@@ -37,6 +44,7 @@
   --bg-color-primary: hsl(245, 100%, 61%);
   --bg-color-primary-hover-active: hsl(245, 78%, 51%);
   --bg-color-secondary: hsl(0, 0%, 100%);
+  --bg-color-secondary-hover-active: hsl(0, 0%, 0%);
   --bg-tertiary-light-red: hsl(32, 100%, 92%);
   --bg-tertiary-light-orange: hsl(61, 100%, 92%);
   --bg-tertiary-light-green: hsl(83, 100%, 92%);
@@ -54,14 +62,15 @@
   /** font family**/
   --font-family-dmsans-regular: 'DMSans-Regular', sans-serif; /* p */
   --font-family-dmsans-medium: 'DMSans-Medium', sans-serif; /* h1 h2 h4  */
-  --font-family-dmsans-bold: 'DMSans-Bold', sans-serif; /* h3 h5 h6 */
+  --font-family-dmsans-bold: 'DMSans-Bold', sans-serif; /* h3 h5 h6*/
 
   /** font weight**/
   --font-weight-regular: 400; /* p */
-  --font-weight-medium: 500; /* h1 h2 h4  */
-  --font-weight-bold: 700; /* h3 h5 h6 */
+  --font-weight-medium: 500; /* h1 h2 h4 p(hover) */
+  --font-weight-bold: 700; /* h3 h5 h6*/
 
   /** font size **/
+  --font-size-xxs: 0.875rem;
   --font-size-xs: 1.125rem; /* p */
   --font-size-s: 1.5rem; /* h6 */
   --font-size-m: 1.625rem; /* h5 */
