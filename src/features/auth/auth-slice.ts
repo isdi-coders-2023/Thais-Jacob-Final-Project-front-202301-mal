@@ -25,7 +25,7 @@ export const checkUserTokenAsync = createAsyncThunk(
     const newUser = Object.fromEntries(formData.entries());
     const apiResponse = await getTokenByUser(newUser as UserCredentials);
 
-    const data: AuthResponse = await apiResponse;
+    const data: AuthResponse = apiResponse;
 
     return data;
   },
