@@ -10,7 +10,7 @@ const LoginPage = () => {
       <div className="login-page-image">
         <img
           src={'../../../assets/images/malaga-view-login.webp'}
-          alt="Waiting for data loading"
+          alt="Malaga view"
         />
       </div>
     </div>
