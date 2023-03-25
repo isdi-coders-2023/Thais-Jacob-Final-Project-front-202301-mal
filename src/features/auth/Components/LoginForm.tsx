@@ -11,6 +11,7 @@ import {
 import { LoadingButton } from '../../../shared/components/Loading/Loading';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { checkUserTokenAsync, selectAuthSlice } from '../auth-slice';
+import { Navigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const responseState = useAppSelector(selectAuthSlice);
@@ -21,9 +22,12 @@ const LoginForm = () => {
     switch (loginStatus) {
       case 'success':
         return (
-          <AuthStatusFeedbackSuccess>
-            You have been successfully logged in!
-          </AuthStatusFeedbackSuccess>
+          <>
+            <AuthStatusFeedbackSuccess role="paragraph">
+              You have been successfully logged in!
+            </AuthStatusFeedbackSuccess>
+            <Navigate to={'/app'} />
+          </>
         );
       case 'error':
         return <AuthStatusFeedbackError>{loginMsg}</AuthStatusFeedbackError>;
@@ -61,9 +65,11 @@ const LoginForm = () => {
         required
         name="password"
       />
+
       <LoginFormButton type="submit">
         {status !== 'loading' ? <span>Log in</span> : <LoadingButton />}
       </LoginFormButton>
+
       {formFeedback()}
     </LoginFormContainer>
   );

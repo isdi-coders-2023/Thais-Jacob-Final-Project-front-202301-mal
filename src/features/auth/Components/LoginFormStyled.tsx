@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const LoginFormContainer = styled.form`
@@ -24,16 +25,23 @@ export const LoginFormInput = styled.input`
   }
 `;
 
-export const LoginFormButton = styled.button`
+export const LoginFormButtonLink = styled(Link)`
   height: 60px;
   border-radius: var(--border-l);
+  margin-top: 24px;
+`;
+
+export const LoginFormButton = styled.button`
+  border-radius: var(--border-l);
+  background-color: var(--bg-color-input);
   border: var(--border-color-secondary);
+  width: 100%;
+  height: 58px;
   font-size: var(--font-size-x);
   font-family: var(--font-family-dmsans-regular);
   font-weight: var(--font-weight-regular);
   background-color: var(--bg-color-input);
   color: var(--color-font-secondary);
-  margin-top: 24px;
 
   :hover {
     background-color: var(--bg-color-secondary-hover-active);

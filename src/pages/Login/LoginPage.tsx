@@ -9,7 +9,7 @@ const LoginPage = () => {
       </div>
       <div className="login-page-image">
         <img
-          src={'../../../images/malaga-view-login.webp'}
+          src={'../../../assets/images/malaga-view-login.webp'}
           alt="Wating for data loading"
         />
       </div>
