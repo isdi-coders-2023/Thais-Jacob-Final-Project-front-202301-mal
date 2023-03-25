@@ -1,0 +1,104 @@
+.not-found-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.not-found-elements {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60%;
+  gap: 48px;
+  order: 1;
+}
+
+.not-found-elements h1 {
+  width: 80%;
+  color: var(--color-font-tittle);
+  font-family: var(--font-family-dmsans-bold);
+  text-align: center;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.not-found-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-l);
+  background-color: var(--bg-color-input);
+  width: 150px;
+  height: 54px;
+  font-size: var(--font-size-x);
+  font-family: var(--font-family-dmsans-regular);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--bg-color-primary);
+  color: var(--color-font-primary);
+  text-align: center;
+  order: 3;
+}
+
+.not-found-elements a:hover {
+  background-color: var(--bg-color-primary-hover-active);
+  color: var(--color-font-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.not-found-image {
+  padding: 1rem;
+  order: 2;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.not-found-image img {
+  max-width: 100%;
+}
+
+@media (min-width: 700px) {
+  .not-found-container {
+    flex-direction: row;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    height: 100vh;
+  }
+
+  .not-found-elements {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60%;
+    gap: 48px;
+  }
+
+  .not-found-elements h1 {
+    width: 80%;
+    color: var(--color-font-tittle);
+    font-family: var(--font-family-dmsans-medium);
+    text-align: center;
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .not-found-image {
+    padding: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
