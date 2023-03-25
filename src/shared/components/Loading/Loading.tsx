@@ -43,7 +43,7 @@ export const LoadingButton = () => {
     <LoadingButtonContainer>
       <LoadingButtonImage
         src={'../../assets/loading/loading-button.gif'}
-        alt="Wating for data loading"
+        alt="Waiting for data loading"
       />
     </LoadingButtonContainer>
   );
