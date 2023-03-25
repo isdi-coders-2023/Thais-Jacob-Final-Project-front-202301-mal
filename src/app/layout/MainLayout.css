@@ -1,0 +1,6 @@
+.heading__title {
+  font-family: var(--font-family-dmsans-regular);
+  color: var(--color-font-secondary);
+  font-size: var(--font-size-s);
+  text-align: center;
+}
