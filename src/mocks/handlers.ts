@@ -1,4 +1,5 @@
 import { rest } from 'msw';
+import { toursFullFilledResponse } from './tours-mocks';
 
 export const handlers = [
   rest.post(
@@ -20,6 +21,21 @@ export const handlers = [
         ctx.status(404),
         ctx.json({ msg: 'It looks like your data is not correct.' }),
       );
+    },
+  ),
+  rest.get(
+    `${process.env.REACT_APP_API_URL}/api/v1/tours`,
+    async (_req, res, ctx) => {
+      return res(ctx.status(200), ctx.json(toursFullFilledResponse));
+    },
+  ),
+];
+
+export const errorHandlers = [
+  rest.get(
+    `${process.env.REACT_APP_API_URL}/api/v1/tours`,
+    (_req, res, ctx) => {
+      return res.once(ctx.status(500), ctx.json(null));
     },
   ),
 ];
