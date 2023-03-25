@@ -4,8 +4,8 @@ import { TourCard } from './TourCard';
 import { fetchToursAsync, selectTours } from '../tour-list-slice';
 import { Loading } from '../../../shared/components/Loading/Loading';
 import { APIStatus } from '../../../models/api-status';
-import { ToursCardList } from './TourListSlyled';
 import {
+  ToursCardList,
   FeedBackError,
   FeedBackErrorImage,
   FeedBackErrorText,
