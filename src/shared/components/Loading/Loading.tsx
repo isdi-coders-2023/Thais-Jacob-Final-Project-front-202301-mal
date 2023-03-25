@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import loadingGif from '../../../assets/image/loading-page.gif';
-import loadingButton from '../../../assets/image/loading-button.gif';
 
 const LoadingContainer = styled.main`
   display: flex;
@@ -17,7 +15,10 @@ const LoadingImage = styled.img`
 export const Loading = () => {
   return (
     <LoadingContainer>
-      <LoadingImage src={loadingGif} alt="Wating for data loading" />
+      <LoadingImage
+        src={'../../assets/loading/loading-page.gif'}
+        alt="Waiting for data loading"
+      />
     </LoadingContainer>
   );
 };
@@ -40,7 +41,10 @@ const LoadingButtonImage = styled.img`
 export const LoadingButton = () => {
   return (
     <LoadingButtonContainer>
-      <LoadingButtonImage src={loadingButton} alt="Wating for data loading" />
+      <LoadingButtonImage
+        src={'../../assets/loading/loading-button.gif'}
+        alt="Wating for data loading"
+      />
     </LoadingButtonContainer>
   );
 };

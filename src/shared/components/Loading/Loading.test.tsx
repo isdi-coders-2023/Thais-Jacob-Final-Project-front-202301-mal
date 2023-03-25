@@ -5,7 +5,7 @@ import { Loading, LoadingButton } from './Loading';
 describe('General loading Component', () => {
   test('should display a general loading', () => {
     render(<Loading />);
-    const loadingImage = screen.getByAltText('Wating for data loading');
+    const loadingImage = screen.getByAltText('Waiting for data loading');
     expect(loadingImage).toBeInTheDocument();
   });
 
@@ -30,7 +30,7 @@ describe('General loading Component', () => {
 describe('Button loading Component', () => {
   test('should display a button loading', () => {
     render(<LoadingButton />);
-    const loadingButton = screen.getByAltText('Wating for data loading');
+    const loadingButton = screen.getByAltText('Waiting for data loading');
     expect(loadingButton).toBeInTheDocument();
   });
 
