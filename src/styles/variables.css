@@ -6,18 +6,21 @@
   --color-font-primary-disabled: hsl(0, 0%, 64%);
 
   /** secondary font **/
-  --color-font-secondary: hsl(0, 0%, 0%);
+  --color-font-secondary: hsl(232, 33%, 13%);
   --color-font-secondary-disabled: hsl(0, 0%, 64%);
 
   /** tertiary font **/
-  --color-font-tertiary: hsl(0, 0%, 0%);
+  --color-font-tertiary: hsl(232, 33%, 13%);
+
+  /** tittle font **/
+  --color-font-tittle: hsl(248, 66%, 17%);
 
   /** paragrah font **/
   --color-font-paragraph: hsl(245, 14%, 49%);
   --color-font-paragraph-light: hsl(209, 16%, 72%);
 
   /** alert font **/
-  --color-font-alert: hsl(0, 0%, 0%);
+  --color-font-alert: hsl(232, 33%, 13%);
 
   /** input font **/
   --color-font-input: hsl(245, 14%, 49%);
@@ -38,6 +41,8 @@
   --border-color-secondary: 1px solid hsl(0, 0%, 0%);
   --border-color-tertiary: 1px solid hsl(0, 0%, 0%);
   --border-color-disable: 1px solid hsl(0, 0%, 61%);
+  --border-color-card: 1px solid hsl(230, 13%, 91%);
+  --border-color-card-creator: 1px solid hsl(223, 100%, 74%);
 
   /* BACKGROUND COLORS */
   --bg-color-input: hsl(0, 0%, 100%);
@@ -56,6 +61,8 @@
 
   /* SHADOWS */
   --box-shadow-input: 0px 2px 6px rgba(19, 18, 66, 0.07);
+  --box-shadow-card: 0px 0px 1px rgba(12, 26, 75, 0.24),
+    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
 
   /* FONTS */
 

@@ -14,6 +14,7 @@
     "@types/styled-components": "^5.1.26",
     "@types/testing-library__react": "^10.2.0",
     "cors": "^2.8.5",
+    "date-fns": "^2.29.3",
     "msw": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,6 +22,7 @@
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.8",
+    "styled-icons": "^10.47.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },

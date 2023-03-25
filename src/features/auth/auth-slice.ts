@@ -25,9 +25,7 @@ export const checkUserTokenAsync = createAsyncThunk(
     const newUser = Object.fromEntries(formData.entries());
     const apiResponse = await getTokenByUser(newUser as UserCredentials);
 
-    const data: AuthResponse = apiResponse;
-
-    return data;
+    return apiResponse;
   },
 );
 
@@ -47,7 +45,8 @@ export const authSlice = createSlice({
           state.status = 'idle';
           state.loginStatus = 'success';
           state.loginMsg = action.payload.msg;
-          sessionStorage.setItem('Bearer', action.payload.accessToken);
+          sessionStorage.setItem('accessToken', action.payload.accessToken);
+          sessionStorage.setItem('Id', action.payload.id);
         },
       )
       .addCase(checkUserTokenAsync.rejected, (state, action: any) => {
@@ -59,5 +58,4 @@ export const authSlice = createSlice({
 });
 
 export const selectAuthSlice = (state: RootState) => state.auth;
-
 export default authSlice.reducer;

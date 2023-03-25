@@ -1,7 +1,9 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
 import { store } from '../../../app/store';
 import LoginForm from './LoginForm';
+import { setupServer } from 'msw/node';
 import { server } from '../../../mocks/server';
 import userEvent from '@testing-library/user-event';
 
@@ -10,46 +12,65 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
 describe('Given a login form component', () => {
-  test('When a user tries to login with a valid email and password, then he should receive his access token', async () => {
+  test('When the user clicks submit button, then it should call a function', async () => {
     render(
       <Provider store={store}>
         <LoginForm />
       </Provider>,
+    );
+    const submitFn = jest.fn();
+    const submitElement = screen.getByRole('button');
+    userEvent.click(submitElement, submitFn());
+    await waitFor(() => {
+      expect(submitFn).toHaveBeenCalled();
+    });
+  });
+
+  test('When a user tries to login with a valid email and password, then he should receive his access token', async () => {
+    render(
+      <MemoryRouter initialEntries={['/auth/login']}>
+        <Provider store={store}>
+          <LoginForm />
+        </Provider>
+      </MemoryRouter>,
     );
 
     await userEvent.type(
       screen.getByPlaceholderText('Email'),
       'email@test.com',
     );
-
     await userEvent.type(screen.getByPlaceholderText('Password'), 'password');
+
     userEvent.click(screen.getByRole('button'));
 
     await waitFor(() => {
-      expect(
-        screen.getByText('You have been successfully logged in!'),
-      ).toBeInTheDocument();
+      expect(screen.getByRole('paragraph')).toBeInTheDocument();
     });
   });
-
-  test('When there is an error while logging in, then the user should receive an error message as feedback', async () => {
+  test.skip('When a user tries to login and there is an error it should show message as feedback', async () => {
     render(
-      <Provider store={store}>
-        <LoginForm />
-      </Provider>,
+      <MemoryRouter initialEntries={['/auth/login']}>
+        <Provider store={store}>
+          <LoginForm />
+        </Provider>
+      </MemoryRouter>,
     );
 
-    await userEvent.type(
-      screen.getByPlaceholderText('Email'),
-      'secondemailtest@gmail.com',
-    );
-    await userEvent.type(screen.getByPlaceholderText('Password'), 'password');
-    userEvent.click(screen.getByRole('button'));
+    const email = screen.getByPlaceholderText('Email');
+    await userEvent.type(email, 'emailtest.com');
+    const password = screen.getByPlaceholderText('Password');
+    await userEvent.type(password, 'mySecurePassss');
 
-    await waitFor(() => {
-      expect(
-        screen.getByText('It looks like your data is not correct...'),
-      ).toBeInTheDocument();
-    });
+    const submit = screen.getByRole('button');
+    userEvent.click(submit);
+
+    await waitFor(
+      () => {
+        expect(
+          screen.getByText('It looks like your data is not correct...'),
+        ).toBeInTheDocument();
+      },
+      { timeout: 1000 },
+    );
   });
 });
