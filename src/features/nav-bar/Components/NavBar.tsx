@@ -1,4 +1,10 @@
-import { NavBarContainer, NavBarLink, NavBarLogo } from './NavBarStyled';
+import {
+  GoCreateButton,
+  GoCreateButtonContainer,
+  NavBarContainer,
+  NavBarLink,
+  NavBarLogo,
+} from './NavBarStyled';
 
 export const NavBar = () => {
   return (
@@ -10,6 +16,9 @@ export const NavBar = () => {
             alt="Malaguide logo"
           />
         </NavBarLink>
+        <GoCreateButtonContainer>
+          <GoCreateButton to={'/app/create-tour'}>Create tour</GoCreateButton>
+        </GoCreateButtonContainer>
       </NavBarContainer>
     </>
   );
