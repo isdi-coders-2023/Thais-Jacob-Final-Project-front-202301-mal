@@ -34,7 +34,7 @@ export const TourCard: FC<CardProps> = ({ tour }) => {
 
         <TourCardInfo>
           <TourCardMainInfo>
-            <TourCardTittle>{tour.tittle}</TourCardTittle>
+            <TourCardTittle>{tour.title}</TourCardTittle>
             <TourCardSummary>{tour.summary}</TourCardSummary>
           </TourCardMainInfo>
 
