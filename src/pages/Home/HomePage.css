@@ -10,6 +10,11 @@
   padding-right: 40px;
 }
 
+.home-page-container {
+  padding-bottom: 8rem;
+  overflow-y: auto;
+}
+
 .image-container {
   position: relative;
   display: flex;
