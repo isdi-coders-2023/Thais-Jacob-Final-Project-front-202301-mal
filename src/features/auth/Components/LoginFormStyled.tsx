@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const LoginFormContainer = styled.form`
@@ -23,12 +22,6 @@ export const LoginFormInput = styled.input`
   ::placeholder {
     padding-left: 0.5rem;
   }
-`;
-
-export const LoginFormButtonLink = styled(Link)`
-  height: 60px;
-  border-radius: var(--border-l);
-  margin-top: 24px;
 `;
 
 export const LoginFormButton = styled.button`
