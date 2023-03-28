@@ -33,16 +33,16 @@ const CreateTourForm = () => {
       case TourStatus.SUCCESS:
         return (
           <>
-            <CreateFeedBackSuccess>
-              Tour was successfully created.
+            <CreateFeedBackSuccess role="paragraph">
+              Tour was successfully created 🎉
             </CreateFeedBackSuccess>
           </>
         );
       case TourStatus.ERROR:
         return (
           <>
-            <CreateFeedBackError>
-              It was not possible to create the tour.
+            <CreateFeedBackError role="paragraph">
+              It was not possible to create the tour 🙁
             </CreateFeedBackError>
           </>
         );
@@ -82,7 +82,7 @@ const CreateTourForm = () => {
             type="text"
             name="summary"
             id="summary"
-            pattern="[a-zA-Z.,;:!? -]{5,92}"
+            pattern="[a-zA-Z.,;:!? -]{5,95}"
             required
           />
         </InputLabelStyled>
