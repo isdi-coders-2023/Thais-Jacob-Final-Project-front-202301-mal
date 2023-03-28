@@ -27,7 +27,7 @@ const TourCardList = () => {
         return (
           <ToursCardList>
             {tours.map(tour => (
-              <li key={tour.tittle}>
+              <li key={tour.title}>
                 <TourCard tour={tour} />
               </li>
             ))}

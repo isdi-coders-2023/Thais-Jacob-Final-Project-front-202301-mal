@@ -10,7 +10,9 @@ describe('Given a nav bar component', () => {
     );
 
     const projectsLink = screen.getByRole('img');
+    const createLink = screen.getByText('Create tour');
 
     expect(projectsLink).toBeInTheDocument();
+    expect(createLink).toBeInTheDocument();
   });
 });

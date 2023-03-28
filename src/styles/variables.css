@@ -1,6 +1,10 @@
 :root {
   /* FONT COLORS */
 
+  /** link font **/
+  --color-font-link: hsl(245, 100%, 61%);
+  --color-font-link-hover-active: hsl(245, 78%, 51%);
+
   /** primary font **/
   --color-font-primary: hsl(0, 0%, 100%);
   --color-font-primary-disabled: hsl(0, 0%, 64%);
@@ -23,8 +27,9 @@
   --color-font-alert: hsl(232, 33%, 13%);
 
   /** input font **/
-  --color-font-input: hsl(245, 14%, 49%);
+  --color-font-input: hsl(245, 14%, 67%);
   --color-font-input-error: hsl(0, 100%, 67%);
+  --color-font-input-filled: hsl(232, 33%, 13%);
 
   /** form font **/
   --color-font-form: hsl(245, 14%, 49%);
@@ -47,7 +52,7 @@
   /* BACKGROUND COLORS */
   --bg-color-input: hsl(0, 0%, 100%);
   --bg-color-primary: hsl(245, 100%, 61%);
-  --bg-color-primary-hover-active: hsl(245, 78%, 51%);
+  --bg-color-primary-hover-active: hsl(245, 82%, 42%);
   --bg-color-secondary: hsl(0, 0%, 100%);
   --bg-color-secondary-hover-active: hsl(0, 0%, 0%);
   --bg-tertiary-light-red: hsl(32, 100%, 92%);

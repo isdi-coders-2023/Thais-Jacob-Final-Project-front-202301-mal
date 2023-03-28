@@ -3,7 +3,6 @@ import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { store } from '../../../app/store';
 import LoginForm from './LoginForm';
-import { setupServer } from 'msw/node';
 import { server } from '../../../mocks/server';
 import userEvent from '@testing-library/user-event';
 

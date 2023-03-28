@@ -1,5 +1,5 @@
 export interface Tour {
-  tittle: string;
+  title: string;
   summary: string;
   image: string;
   meetingPoint: string;

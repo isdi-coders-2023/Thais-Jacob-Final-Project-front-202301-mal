@@ -77,7 +77,7 @@ export const TourCardMeetingPoint = styled.p`
   padding-left: 3px;
 `;
 
-export const TourCardLocal = styled.p`
+export const TourCardLocal = styled.div`
   display: flex;
   align-items: center;
 `;

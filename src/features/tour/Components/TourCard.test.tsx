@@ -8,7 +8,7 @@ describe('When a Card component is rendered', () => {
   const mockDate = new Date('2022-04-01T00:00:00.000Z');
 
   const tour: Tour = {
-    tittle: 'tittle test',
+    title: 'tittle test',
     summary: 'summary test',
     image: '',
     meetingPoint: 'local test',
@@ -23,7 +23,7 @@ describe('When a Card component is rendered', () => {
       </Provider>,
     );
 
-    const tittleElement = screen.getByText(tour.tittle);
+    const tittleElement = screen.getByText(tour.title);
     expect(tittleElement).toBeInTheDocument();
 
     const summaryElement = screen.getByText(tour.summary);

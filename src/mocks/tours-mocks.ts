@@ -2,7 +2,7 @@ export const toursFullFilledResponse = {
   tours: [
     {
       _id: '641ce19ba9e2225af748a0b0',
-      tittle: 'Teatro Romano',
+      title: 'Teatro Romano',
       summary:
         'Explore the 11th-century fortress and stunning views at Alcazaba de Málaga. Expert guides share its fascinating history.',
       description:
@@ -13,13 +13,12 @@ export const toursFullFilledResponse = {
       meetingPoint: 'C. Alcazabilla, s/n',
       price: 15,
       date: '2023-04-12T00:00:00.000Z',
-      category: 'city',
       assistants: [],
       creator: '6415e3551d4e6cb3f45abce4',
     },
     {
       _id: '641ce271a9e2225af748a0b3',
-      tittle: 'Bike Tour',
+      title: 'Bike Tour',
       summary:
         "Discover Málaga's landmarks and hidden gems on our Bike Tour. Perfect for all levels, book now!",
       description:
@@ -30,7 +29,6 @@ export const toursFullFilledResponse = {
       meetingPoint: 'C. Almansa, 32',
       price: 20,
       date: '2023-04-20T00:00:00.000Z',
-      category: 'city',
       assistants: [],
       creator: '6415e3551d4e6cb3f45abce4',
     },
