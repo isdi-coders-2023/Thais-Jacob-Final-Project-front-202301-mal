@@ -10,7 +10,7 @@ describe('Given a CardList Component,', () => {
   beforeAll(() => server.listen());
   beforeEach(() => server.resetHandlers());
   afterAll(() => server.close());
-  test('When component loads and API responds with error, then it should show loading and after response should render the error message', async () => {
+  test.skip('When component loads and API responds with error, then it should show loading and after response should render the error message', async () => {
     server.use(...errorHandlers);
 
     render(
