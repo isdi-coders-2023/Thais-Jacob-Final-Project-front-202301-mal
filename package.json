@@ -13,8 +13,6 @@
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
     "@types/testing-library__react": "^10.2.0",
-    "cors": "^2.8.5",
-    "date-fns": "^2.29.3",
     "msw": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -12,13 +12,23 @@ export const NavBarContainer = styled.div`
   }
 `;
 
-export const NavBarLogo = styled.img`
-  min-height: 20%;
+export const NavBarLogoDesktop = styled.img`
+  display: none;
+  @media (min-width: 900px) {
+    display: block;
+    padding-left: 4.5rem;
+    width: 240px;
+    height: 54px;
+  }
+`;
 
+export const NavBarLogoMobile = styled.img`
+  display: block;
+  height: 58px;
+  width: 66px;
   padding-left: 1rem;
-  @media (min-width: 1024px) {
-    padding-left: 5.5rem;
-    max-height: 50%;
+  @media (min-width: 900px) {
+    display: none;
   }
 `;
 

@@ -21,12 +21,14 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  width: 100%;
+  height: auto;
 }
 
 .image-container img {
-  max-width: 100%;
-  min-height: 20%;
-  min-width: 1000px;
+  width: 1800px;
+  height: 300px;
+  object-fit: cover;
   filter: brightness(60%);
 }
 
@@ -52,7 +54,7 @@
     padding-bottom: 40px;
   }
   .image-container img {
-    max-height: auto;
+    height: 500px;
   }
   .image-container h1 {
     font-size: var(--font-size-xxxl);

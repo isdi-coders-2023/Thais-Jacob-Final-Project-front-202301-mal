@@ -5,7 +5,6 @@ export interface User {
 }
 
 export interface AuthResponse {
-  id: string;
   msg: string;
   accessToken: string;
 }

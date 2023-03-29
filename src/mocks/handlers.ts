@@ -33,7 +33,7 @@ export const handlers = [
   rest.get(
     `${process.env.REACT_APP_API_URL}/api/v1/tours/goodId`,
     (_req, res, ctx) => {
-      const mockDate = new Date('2022-04-01T00:00:00.000Z');
+      const mockDate = '2022-04-01T00:00:00.000Z';
       return res(
         ctx.status(200),
         ctx.json({

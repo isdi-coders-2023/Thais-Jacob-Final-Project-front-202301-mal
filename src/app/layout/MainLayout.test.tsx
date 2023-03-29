@@ -9,8 +9,8 @@ test('When rendering mainlayout, then navbar and outlet must be in the document'
       <MainLayout />
     </BrowserRouter>,
   );
-  const navBarElement = screen.getByAltText('Malaguide logo');
-  expect(navBarElement).toBeInTheDocument();
+  const navBarElement = screen.getAllByAltText('Malaguide logo');
+  navBarElement.map(element => expect(element).toBeInTheDocument());
 
   const outletElement = screen.getByRole('main');
   expect(outletElement).toBeInTheDocument();

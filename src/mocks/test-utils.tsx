@@ -29,7 +29,7 @@ export const renderWithProviders = (
           image: '',
           meetingPoint: '',
           price: 0,
-          date: new Date(),
+          date: '',
         },
         status: APIStatus.IDLE,
         responseMsg: '',
