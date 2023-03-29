@@ -3,7 +3,8 @@ import {
   GoCreateButtonContainer,
   NavBarContainer,
   NavBarLink,
-  NavBarLogo,
+  NavBarLogoDesktop,
+  NavBarLogoMobile,
 } from './NavBarStyled';
 
 export const NavBar = () => {
@@ -11,8 +12,12 @@ export const NavBar = () => {
     <>
       <NavBarContainer>
         <NavBarLink to={'/app'}>
-          <NavBarLogo
+          <NavBarLogoDesktop
             src={'../../assets/logos/logo-malaguide.svg'}
+            alt="Malaguide logo"
+          />
+          <NavBarLogoMobile
+            src={'../../assets/logos/logo-malaguide-mobile.svg'}
             alt="Malaguide logo"
           />
         </NavBarLink>
