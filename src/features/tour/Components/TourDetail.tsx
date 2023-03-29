@@ -1,4 +1,3 @@
-import { format } from 'date-fns';
 import { FC, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { APIStatus } from '../../../models/api-status';
@@ -34,9 +33,11 @@ const TourDetail: FC<CardDetailProps> = ({ tourId }) => {
 
   const videoId = tour.video.split('?v=')[1];
 
-  const dateStr = tour.date;
-  const date = new Date(dateStr);
-  const formattedDate = format(date, 'MMM do');
+  const date = new Date(tour.date);
+  const dateString = date.toLocaleString('en', {
+    month: 'short',
+    day: '2-digit',
+  });
 
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -68,7 +69,7 @@ const TourDetail: FC<CardDetailProps> = ({ tourId }) => {
                 <AdditionalInfo>
                   <DetailInfo>
                     <TitleInfo role="paragraph">Date</TitleInfo>
-                    <InfoTour role="paragraph">{`${formattedDate}`}</InfoTour>
+                    <InfoTour role="paragraph">{`${dateString}`}</InfoTour>
                   </DetailInfo>
                   <Divider />
                   <DetailInfo>

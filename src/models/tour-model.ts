@@ -5,7 +5,7 @@ export interface Tour {
   image: string;
   meetingPoint: string;
   price: number;
-  date: Date;
+  date: string;
 }
 
 export interface TourDetailInterface {
@@ -16,7 +16,7 @@ export interface TourDetailInterface {
   image: string;
   meetingPoint: string;
   price: number;
-  date: Date;
+  date: string;
 }
 
 export type TourId = Pick<TourDetailInterface, '_id'>;

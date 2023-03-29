@@ -25,9 +25,11 @@ interface CardProps {
 export const TourCard: FC<CardProps> = ({ tour }) => {
   const { _id } = tour;
 
-  const dateStr = tour.date;
-  const date = new Date(dateStr);
-  const formattedDate = format(date, 'MMM do');
+  const date = new Date(tour.date);
+  const dateString = date.toLocaleString('en', {
+    month: 'short',
+    day: '2-digit',
+  });
 
   return (
     <TourCardContainer>
@@ -46,7 +48,7 @@ export const TourCard: FC<CardProps> = ({ tour }) => {
               <TourCardMeetingPoint>{tour.meetingPoint}</TourCardMeetingPoint>
             </TourCardLocal>
 
-            <TourCardDate>{`${formattedDate}`}</TourCardDate>
+            <TourCardDate>{`${dateString}`}</TourCardDate>
           </TourCardExtraInfo>
 
           <TourCardButtonAndPrice>

@@ -28,7 +28,7 @@ const INITIAL_STATE: ToursState = {
     image: '',
     meetingPoint: '',
     price: 0,
-    date: new Date(),
+    date: '',
   },
   status: APIStatus.IDLE,
   responseMsg: '',
@@ -55,7 +55,7 @@ export const createTourAsync = createAsyncThunk(
         image: '',
         meetingPoint: '',
         price: 0,
-        date: new Date(),
+        date: '',
       },
       apiResponse,
     } as CreateTourResponse;

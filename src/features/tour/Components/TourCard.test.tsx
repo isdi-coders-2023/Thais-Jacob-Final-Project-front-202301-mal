@@ -6,8 +6,6 @@ import { Tour } from '../../../models/tour-model';
 import { TourCard } from './TourCard';
 
 describe('When a Card component is rendered', () => {
-  const mockDate = new Date('2022-04-01T00:00:00.000Z');
-
   const tour: Tour = {
     _id: 'id test',
     title: 'tittle test',
@@ -15,7 +13,7 @@ describe('When a Card component is rendered', () => {
     image: '',
     meetingPoint: 'local test',
     price: 5,
-    date: new Date(mockDate),
+    date: '2022-04-01T00:00:00.000Z',
   };
 
   test('Then it should show an ad card', async () => {
@@ -43,6 +41,6 @@ describe('When a Card component is rendered', () => {
     const imgElement = await screen.findByAltText('tour-picture');
     expect(imgElement).toBeInTheDocument();
 
-    expect(tour.date).toEqual(mockDate);
+    expect(tour.date).toEqual('2022-04-01T00:00:00.000Z');
   });
 });
