@@ -33,8 +33,8 @@ export const GoCreateButton = styled(Link)`
   justify-content: center;
   border-radius: var(--border-l);
   background-color: var(--bg-color-primary);
-  width: 180px;
-  height: 48px;
+  width: 260px;
+  height: 52px;
   font-size: var(--font-size-x);
   font-family: var(--font-family-dmsans-regular);
   font-weight: var(--font-weight-regular);
@@ -51,9 +51,9 @@ export const GoCreateButton = styled(Link)`
     background-color: var(--bg-color-secondary);
   }
 
-  @media (min-width: 900px) {
-    width: 260px;
-    height: 52px;
+  @media (max-width: 900px) {
+    width: 130px;
+    height: 48px;
   }
 `;
 

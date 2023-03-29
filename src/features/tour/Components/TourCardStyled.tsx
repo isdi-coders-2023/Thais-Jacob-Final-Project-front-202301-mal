@@ -10,8 +10,10 @@ export const TourCardContainer = styled.article`
   transition: 0.2s ease-in-out;
   box-shadow: var(--box-shadow-card);
   border: var(--border-color-card);
+  padding-bottom: 48px;
   @media (min-width: 1024px) {
     height: 486px;
+    padding-bottom: 80px;
   }
 `;
 
@@ -44,7 +46,7 @@ export const TourCardTittle = styled.h5`
   padding-bottom: 8px;
 `;
 
-export const TourCardSummary = styled.p`
+export const TourCardDescription = styled.p`
   display: none;
   @media (min-width: 1024px) {
     display: block;
@@ -103,9 +105,12 @@ export const TourCardButtonAndPrice = styled.div`
   padding-right: 24px;
 `;
 
-export const TourCardButton = styled.button`
+export const TourCardButton = styled(Link)`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: var(--border-l);
-  background-color: var(--bg-color-input);
   border: var(--border-color-secondary);
   width: 150px;
   height: 54px;
