@@ -3,8 +3,7 @@ import { FC, useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { APIStatus } from '../../../models/api-status';
 import { Loading } from '../../../shared/components/Loading/Loading';
-import { getByIdTourAsync } from '../tour-list-slice';
-import { selectTours } from '../tour-list-slice';
+import { getByIdTourAsync, selectTours } from '../tour-list-slice';
 import {
   AdditionalInfo,
   BackButton,
