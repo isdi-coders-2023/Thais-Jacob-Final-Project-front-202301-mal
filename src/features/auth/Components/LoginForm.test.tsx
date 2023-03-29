@@ -5,6 +5,8 @@ import { store } from '../../../app/store';
 import LoginForm from './LoginForm';
 import { server } from '../../../mocks/server';
 import userEvent from '@testing-library/user-event';
+import { errorHandlers } from '../../../mocks/handlers';
+import { renderWithProviders } from '../../../mocks/test-utils';
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
@@ -46,30 +48,29 @@ describe('Given a login form component', () => {
       expect(screen.getByRole('paragraph')).toBeInTheDocument();
     });
   });
-  test.skip('When a user tries to login and there is an error it should show message as feedback', async () => {
-    render(
-      <MemoryRouter initialEntries={['/auth/login']}>
-        <Provider store={store}>
-          <LoginForm />
-        </Provider>
+  test('When a user tries to login and there is an error it should show message as feedback', async () => {
+    server.use(...errorHandlers);
+
+    renderWithProviders(
+      <MemoryRouter>
+        <LoginForm />
       </MemoryRouter>,
     );
 
-    const email = screen.getByPlaceholderText('Email');
-    await userEvent.type(email, 'emailtest.com');
-    const password = screen.getByPlaceholderText('Password');
-    await userEvent.type(password, 'mySecurePassss');
-
-    const submit = screen.getByRole('button');
-    userEvent.click(submit);
-
-    await waitFor(
-      () => {
-        expect(
-          screen.getByText('It looks like your data is not correct...'),
-        ).toBeInTheDocument();
-      },
-      { timeout: 1000 },
+    await userEvent.type(
+      screen.getByPlaceholderText('Email'),
+      'secondemailtest@gmail.com',
     );
+    await userEvent.type(
+      screen.getByPlaceholderText('Password'),
+      'badpassword',
+    );
+    userEvent.click(screen.getByRole('button'));
+
+    await waitFor(() => {
+      expect(
+        screen.getByText('It looks like your data is not correct...'),
+      ).toBeInTheDocument();
+    });
   });
 });

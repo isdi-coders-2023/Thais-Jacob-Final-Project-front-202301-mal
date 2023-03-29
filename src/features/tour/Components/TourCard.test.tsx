@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
 import { store } from '../../../app/store';
 import { Tour } from '../../../models/tour-model';
 import { TourCard } from './TourCard';
@@ -8,6 +9,7 @@ describe('When a Card component is rendered', () => {
   const mockDate = new Date('2022-04-01T00:00:00.000Z');
 
   const tour: Tour = {
+    _id: 'id test',
     title: 'tittle test',
     summary: 'summary test',
     image: '',
@@ -18,9 +20,12 @@ describe('When a Card component is rendered', () => {
 
   test('Then it should show an ad card', async () => {
     render(
-      <Provider store={store}>
-        <TourCard tour={tour} />
-      </Provider>,
+      <MemoryRouter>
+        <Provider store={store}>
+          <TourCard tour={tour} />
+        </Provider>
+        ,
+      </MemoryRouter>,
     );
 
     const tittleElement = screen.getByText(tour.title);
