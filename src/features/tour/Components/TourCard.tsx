@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { format } from 'date-fns';
 import { Tour } from '../../../models/tour-model';
 import {
   TourCardButtonAndPrice,

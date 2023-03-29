@@ -14,5 +14,5 @@ export const getTokenByUser = async (
     throw new Error('It looks like your data is not correct...');
   }
 
-  return response.json();
+  return await response.json();
 };

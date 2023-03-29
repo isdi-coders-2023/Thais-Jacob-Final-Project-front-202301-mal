@@ -46,7 +46,6 @@ export const authSlice = createSlice({
           state.loginStatus = 'success';
           state.loginMsg = action.payload.msg;
           sessionStorage.setItem('accessToken', action.payload.accessToken);
-          sessionStorage.setItem('Id', action.payload.id);
         },
       )
       .addCase(checkUserTokenAsync.rejected, (state, action: any) => {

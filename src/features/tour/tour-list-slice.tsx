@@ -44,7 +44,7 @@ export const createTourAsync = createAsyncThunk(
   'tours/createTour',
   async (newTourForm: HTMLFormElement) => {
     const newTour = new FormData(newTourForm);
-    const apiResponse = await createNewTour(newTour);
+    await createNewTour(newTour);
 
     return {
       msg: 'ok',
@@ -57,7 +57,6 @@ export const createTourAsync = createAsyncThunk(
         price: 0,
         date: '',
       },
-      apiResponse,
     } as CreateTourResponse;
   },
 );
