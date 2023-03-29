@@ -73,15 +73,16 @@
 
   /** font family**/
   --font-family-dmsans-regular: 'DMSans-Regular', sans-serif; /* p */
-  --font-family-dmsans-medium: 'DMSans-Medium', sans-serif; /* h1 h2 h4  */
+  --font-family-dmsans-medium: 'DMSans-Medium', sans-serif; /* h1 h2 h4 xxxs*/
   --font-family-dmsans-bold: 'DMSans-Bold', sans-serif; /* h3 h5 h6*/
 
   /** font weight**/
   --font-weight-regular: 400; /* p */
-  --font-weight-medium: 500; /* h1 h2 h4 p(hover) */
+  --font-weight-medium: 500; /* h1 h2 h4 p(hover) xxxs*/
   --font-weight-bold: 700; /* h3 h5 h6*/
 
   /** font size **/
+  --font-size-xxxs: 1rem;
   --font-size-xxs: 0.875rem;
   --font-size-xs: 1.125rem; /* p */
   --font-size-s: 1.5rem; /* h6 */
