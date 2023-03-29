@@ -9,6 +9,7 @@ const HomePage = () => {
           <img
             src="../../assets/images/malaga-homepage.webp"
             alt="malaga pic"
+            loading="eager"
           />
           <h1>
             Explore the heart of Andalusia and unlock the secrets of Málaga
