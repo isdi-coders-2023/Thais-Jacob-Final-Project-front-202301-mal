@@ -4,6 +4,7 @@ import LoginPage from '../../pages/Login/LoginPage';
 import NotFound from '../../pages/NotFound/NotFound';
 import CreateTour from '../../pages/CreateTour/CreateTour';
 import MainLayout from '../layout/MainLayout';
+import DetailPage from '../../pages/Detail/DetailPage';
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: 'create-tour',
         element: <CreateTour />,
+      },
+      {
+        path: 'detail/:_id',
+        element: <DetailPage />,
       },
     ],
   },

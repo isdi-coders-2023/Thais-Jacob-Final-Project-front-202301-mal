@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { getToursList } from './tour-list-api';
+import { getTourById, getToursList } from './tour-list-api';
 import { RootState } from '../../app/store';
-import { Tour } from '../../models/tour-model';
+import { Tour, TourDetailInterface } from '../../models/tour-model';
 import { APIStatus, TourStatus } from '../../models/api-status';
 import { createNewTour } from '../create-tour/create-tour-api';
 
@@ -12,6 +12,7 @@ export interface ToursResponse {
 
 export interface ToursState {
   tours: Tour[];
+  tour: TourDetailInterface;
   status: APIStatus;
   responseMsg: string | undefined;
   createStatus: TourStatus;
@@ -19,6 +20,16 @@ export interface ToursState {
 
 const INITIAL_STATE: ToursState = {
   tours: [],
+  tour: {
+    _id: '',
+    title: '',
+    description: '',
+    video: '',
+    image: '',
+    meetingPoint: '',
+    price: 0,
+    date: new Date(),
+  },
   status: APIStatus.IDLE,
   responseMsg: '',
   createStatus: TourStatus.NOT_USED,
@@ -38,6 +49,7 @@ export const createTourAsync = createAsyncThunk(
     return {
       msg: 'ok',
       tour: {
+        _id: '',
         title: '',
         summary: '',
         image: '',
@@ -57,6 +69,15 @@ export const fetchToursAsync = createAsyncThunk(
   async () => {
     const apiResponse = await getToursList();
     const data: ToursResponse = await apiResponse.json();
+    return data;
+  },
+);
+
+export const getByIdTourAsync = createAsyncThunk(
+  `${STATE_NAME}/getByIdTour`,
+  async (id: string) => {
+    const data = await getTourById(id);
+
     return data;
   },
 );
@@ -89,7 +110,6 @@ export const cardListSlice = createSlice({
     builder.addCase(createTourAsync.pending, state => {
       state.createStatus = TourStatus.LOADING;
     });
-
     builder.addCase(
       createTourAsync.fulfilled,
       (state, action: PayloadAction<CreateTourResponse>) => {
@@ -97,10 +117,20 @@ export const cardListSlice = createSlice({
         state.responseMsg = action.payload.msg;
       },
     );
-
     builder.addCase(createTourAsync.rejected, (state, action) => {
       state.createStatus = TourStatus.ERROR;
       state.responseMsg = action.error.message;
+    });
+
+    builder.addCase(getByIdTourAsync.pending, state => {
+      state.status = APIStatus.LOADING;
+    });
+    builder.addCase(getByIdTourAsync.fulfilled, (state, action) => {
+      state.status = APIStatus.IDLE;
+      state.tour = action.payload as TourDetailInterface;
+    });
+    builder.addCase(getByIdTourAsync.rejected, (state, action) => {
+      state.status = APIStatus.ERROR;
     });
   },
 });

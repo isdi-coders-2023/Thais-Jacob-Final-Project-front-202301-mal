@@ -11,7 +11,7 @@ import {
   TourCardInfo,
   TourCardLocal,
   TourCardMainInfo,
-  TourCardSummary,
+  TourCardDescription,
   TourCardTittle,
   TouCardPrice,
   TourCardIcon,
@@ -23,6 +23,8 @@ interface CardProps {
 }
 
 export const TourCard: FC<CardProps> = ({ tour }) => {
+  const { _id } = tour;
+
   const dateStr = tour.date;
   const date = new Date(dateStr);
   const formattedDate = format(date, 'MMM do');
@@ -35,7 +37,7 @@ export const TourCard: FC<CardProps> = ({ tour }) => {
         <TourCardInfo>
           <TourCardMainInfo>
             <TourCardTittle>{tour.title}</TourCardTittle>
-            <TourCardSummary>{tour.summary}</TourCardSummary>
+            <TourCardDescription>{tour.summary}</TourCardDescription>
           </TourCardMainInfo>
 
           <TourCardExtraInfo>
@@ -48,7 +50,7 @@ export const TourCard: FC<CardProps> = ({ tour }) => {
           </TourCardExtraInfo>
 
           <TourCardButtonAndPrice>
-            <TourCardButton>View tour</TourCardButton>
+            <TourCardButton to={`detail/${_id}`}>View tour</TourCardButton>
 
             <TouCardPrice>{tour.price}€</TouCardPrice>
           </TourCardButtonAndPrice>
