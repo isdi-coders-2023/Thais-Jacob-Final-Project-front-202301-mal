@@ -1,4 +1,4 @@
-# Malaguide
+# Malaguide (front-end)
 
 Welcome to Malaguide, the web application that connects tourists visiting the city of Malaga with experienced and fun local tour guides. With our app, users can easily search and book tours with information on dates, prices, and incredible experiences. Additionally, we provide a platform for local tour guides to advertise their tours and find new clients.
 
@@ -20,20 +20,20 @@ In summary, Malaguide was created as the final project for the Full Stack Web De
 
 To install project dependencies, run the following command:
 
-'npm install'
+`npm install`
 
 To start the development server, run the following command:
 
-'npm start'
+`npm start`
 
 ### Available Scripts
 
-'npm start': Runs the app in the development mode.
+`npm start`: Runs the app in the development mode.
 
-'npm run build': Builds the app for production to the build folder.
+`npm run build`: Builds the app for production to the build folder.
 
-'npm test': Launches the test runner in the interactive watch mode.
+`npm test`: Launches the test runner in the interactive watch mode.
 
-'npm run eject': Ejects the app from Create React App.
+`npm run eject`: Ejects the app from Create React App.
 
-'npm run prepare': Installs Husky in the project.
+`npm run prepare`: Installs Husky in the project.
