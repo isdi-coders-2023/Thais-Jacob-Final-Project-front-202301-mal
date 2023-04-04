@@ -2,7 +2,7 @@
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-# Malaguide
+# Malaguide (front-end)
 
 Welcome to Malaguide, the web application that connects tourists visiting the city of Malaga with experienced and fun local tour guides. With our app, users can easily search and book tours with information on dates, prices, and incredible experiences. Additionally, we provide a platform for local tour guides to advertise their tours and find new clients.
 
