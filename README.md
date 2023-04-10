@@ -27,24 +27,23 @@ https://github.com/thaixjacob/Thais-Jacob-Final-Project-back-202301-mal
 
 To install project dependencies, run the following command:
 
-'npm install'
+`npm install`
 
 To start the development server, run the following command:
 
-'npm start'
+`npm start`
 
 ## Available Scripts
 
-'npm start': Runs the app in the development mode.
+`npm start`: Runs the app in the development mode.
 
-'npm run build': Builds the app for production to the build folder.
+`npm run build`: Builds the app for production to the build folder.
 
-'npm test': Launches the test runner in the interactive watch mode.
+`npm test`: Launches the test runner in the interactive watch mode.
 
-'npm run eject': Ejects the app from Create React App.
+`npm run eject`: Ejects the app from Create React App.
 
-'npm run prepare': Installs Husky in the project.
+`npm run prepare`: Installs Husky in the project.
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Thais-Jacob-Final-Project-front-202301-mal&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Thais-Jacob-Final-Project-front-202301-mal)
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/thaisjacob
