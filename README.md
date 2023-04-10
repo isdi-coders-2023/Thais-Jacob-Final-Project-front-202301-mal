@@ -1,5 +1,4 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=isdi-coders-2023_Thais-Jacob-Final-Project-front-202301-mal&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=isdi-coders-2023_Thais-Jacob-Final-Project-front-202301-mal)
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 # Malaguide (front-end)
